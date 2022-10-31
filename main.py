@@ -7,11 +7,12 @@ import geocoder
 import socket
 from telebot import types
 import os
-#5588418954:AAE2XfYSFdFvr3TNd5gNHw6SnJIPLL8iVcQ
-#5516069412:AAHbdUDTFUSLKdg5U9sSu3wKAR0k2h3fg9Q
-token = "5516069412:AAHbdUDTFUSLKdg5U9sSu3wKAR0k2h3fg9Q" 
+
+token = input("[~] Enter Token : ")
+user_bot = input("[~] Enter Bot Username :") 
+
 bot = telebot.TeleBot(token)
-sudo = 5539142769
+sudo = input("[~] Enter Sudo Id : ")
 		
 def ex_id(id):
      result = False
@@ -23,7 +24,7 @@ def ex_id(id):
      return result
      x='ضفني في مجموعتك'
      keyboard =types.InlineKeyboardMarkup(row_width=2)
-     button =types.InlineKeyboardButton(x,url='https://t.me/DrakolaVzx_BoT?startgroup=new')
+     button =types.InlineKeyboardButton(x,url=f'https://t.me/{user_bot}?startgroup=new')
      button2 =types.InlineKeyboardButton ('الأوامر',callback_data="click1")
      button3=types.InlineKeyboardButton ('حول ',callback_data='click2')
      keyboard.add(button,button2,button3)
@@ -58,7 +59,7 @@ def start(message):
 		      	f.close()		      	
 		      x='ضفني في مجموعتك'
 		      keyboard =types.InlineKeyboardMarkup(row_width=2)
-		      button =types.InlineKeyboardButton(x,url='https://t.me/DrakolaVzx_BoT?startgroup=new')
+		      button =types.InlineKeyboardButton(x,url='https://t.me/{user_bot}?startgroup=new')
 		      button2 =types.InlineKeyboardButton ('الأوامر',callback_data="click1")
 		      button3=types.InlineKeyboardButton ('حول ',callback_data='click2')
 		      keyboard.add(button,button2,button3)
